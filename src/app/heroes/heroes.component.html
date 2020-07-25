@@ -1,59 +1,8 @@
-<<<<<<< HEAD
-
-<h4>My Heroes</h4>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes"
-=======
-<h2>{{hero.name}}</h2>
-<div><span>id:</span>{{hero.id}}</div>
-<div><span>name:</span>{{hero.name | uppercase}}</div>
-
-<div>
-        <label>name:
-            <input [(ngModel)]="hero.name" placehold="name"/>
-        </label>
-</div>
-<h2>My Flights</h2>
+<h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
-
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-    </label>
-  </div>
-</div>
-
-<div *ngIf="hero">
-
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-  </div>
-
-</div>
-
-<h2>My Heroes</h2>
-
-<ul class="heroes">
-  <li *ngFor="let hero of heroes"z
->>>>>>> 3354aa5fce28777fba45c5de3a21ad935ddf895f
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 3354aa5fce28777fba45c5de3a21ad935ddf895f
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
